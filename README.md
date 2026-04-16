@@ -91,17 +91,21 @@ Full queries available here:
 
 ```
 ## How to Run
+###1. Install the required packages:
 
-### 1. Generate fake data using Python:
+```bash
+python -m pip install -r requirements.txt
+
+### 2. Generate fake data using Python:
 python src/generate_fake_students.py
 python src/generate_canvas_enrollments.py
 python src/generate_canvas_submissions.py
 python src/generate_openapply_guardians.py
 
-### 2. Create tables in PostgreSQL using:
+### 3. Create tables in PostgreSQL using:
 - sql/01_create_tables.sql
 
-### 3. Import CSV files into PostgreSQL tables
+### 4. Import the generated CSV files from data/raw/ into the matching PostgreSQL tables.
 
-### 4. Run analysis queries from:
+### 5. Run analysis queries from:
 - sql/analysis_queries.sql
