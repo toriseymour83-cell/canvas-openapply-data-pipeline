@@ -49,7 +49,7 @@ JOIN canvas_enrollments ce
 WHERE cs.engagement_rating IN ('IE', 'NE')
    OR cs.term_grade IN ('D', 'E');
 
-**###2. Schools with most missing submissions**
+###2. Schools with most missing submissions
 SELECT
     oa.school_name,
     COUNT(*) AS missing_submissions
