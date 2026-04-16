@@ -88,8 +88,9 @@ Full queries available here:
 ## All data in this project is fake and generated for practice purposes only.
 
 
-```
+
 ## How to Run
+
 ### 1. Install the required packages:
 
 ```bash
