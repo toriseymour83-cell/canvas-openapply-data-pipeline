@@ -50,7 +50,7 @@ WHERE cs.engagement_rating IN ('IE', 'NE')
    OR cs.term_grade IN ('D', 'E');
 
 ```
-###2. Schools with most missing submissions
+### 2. Schools with most missing submissions
 ```
 SELECT
     oa.school_name,
@@ -66,7 +66,7 @@ GROUP BY oa.school_name
 ORDER BY missing_submissions DESC;
 
 ```
-###3. Courses with most late submissions
+### 3. Courses with most late submissions
 ```
 SELECT
     ce.course_name,
