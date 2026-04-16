@@ -49,6 +49,7 @@ JOIN canvas_enrollments ce
 WHERE cs.engagement_rating IN ('IE', 'NE')
    OR cs.term_grade IN ('D', 'E');
 
+```sql
 ###2. Schools with most missing submissions
 SELECT
     oa.school_name,
@@ -63,7 +64,8 @@ WHERE cs.missing = TRUE
 GROUP BY oa.school_name
 ORDER BY missing_submissions DESC;
 
-**###3. Courses with most late submissions**
+```sql
+###3. Courses with most late submissions
 SELECT
     ce.course_name,
     COUNT(*) AS total_submissions,
@@ -75,6 +77,7 @@ JOIN canvas_enrollments ce
 GROUP BY ce.course_name
 ORDER BY late_submissions DESC;
 
+```
 Notes
 
 All data in this project is fake and generated for practice purposes only.
