@@ -95,7 +95,7 @@ Full queries available here:
 
 ```bash
 python -m pip install -r requirements.txt
-
+```
 ### 2. Generate fake data using Python:
 python src/generate_fake_students.py
 python src/generate_canvas_enrollments.py
