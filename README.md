@@ -48,7 +48,7 @@ JOIN canvas_enrollments ce
    AND cs.course_id = ce.course_id
 WHERE cs.engagement_rating IN ('IE', 'NE')
    OR cs.term_grade IN ('D', 'E');
-
+---
 ```sql
 ###2. Schools with most missing submissions
 SELECT
@@ -63,7 +63,7 @@ JOIN openapply_students oa
 WHERE cs.missing = TRUE
 GROUP BY oa.school_name
 ORDER BY missing_submissions DESC;
-
+---
 ```sql
 ###3. Courses with most late submissions
 SELECT
@@ -76,7 +76,7 @@ JOIN canvas_enrollments ce
    AND cs.course_id = ce.course_id
 GROUP BY ce.course_name
 ORDER BY late_submissions DESC;
-
+---
 ```
 Notes
 
