@@ -87,3 +87,21 @@ Full queries available here:
 ```
   
 ## All data in this project is fake and generated for practice purposes only.
+
+
+```
+### How to Run
+
+## 1. Generate fake data using Python:
+python src/generate_fake_students.py
+python src/generate_canvas_enrollments.py
+python src/generate_canvas_submissions.py
+python src/generate_openapply_guardians.py
+
+## 2. Create tables in PostgreSQL using:
+- sql/01_create_tables.sql
+
+## 3. Import CSV files into PostgreSQL tables
+
+## 4. Run analysis queries from:
+- sql/analysis_queries.sql
