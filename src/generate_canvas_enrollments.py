@@ -4,6 +4,10 @@ import random
 
 fake = Faker("en_GB")
 
+# Load students from OpenApply file (single source of truth)
+students = pd.read_csv("data/raw/openapply_students_fake.csv")
+student_lookup = students.set_index("oa_student_id")[["student_name", "student_email"]].to_dict("index")
+
 courses = [
     (201, "Business Management HL"),
     (202, "Psychology SL"),
@@ -22,8 +26,9 @@ cohorts = ["M2027", "N2027"]
 rows = []
 
 for student_id in range(1, 101):
-    student_email = f"student{student_id}@example-school.org"
-    student_name = fake.name()
+    student = student_lookup[student_id]
+    student_email = student["student_email"]
+    student_name = student["student_name"]
 
     # each student does 2–3 courses
     student_courses = random.sample(courses, k=random.choice([2, 3]))
