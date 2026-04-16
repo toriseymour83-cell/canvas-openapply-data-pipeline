@@ -84,6 +84,6 @@ Notes
 Full queries available here:
 - sql/analysis_queries.sql
 
-- ```
+```
   
 ## All data in this project is fake and generated for practice purposes only.
