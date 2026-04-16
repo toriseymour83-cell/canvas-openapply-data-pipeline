@@ -80,4 +80,10 @@ GROUP BY ce.course_name
 ORDER BY late_submissions DESC;
 Notes
 
-All data in this project is fake and generated for practice purposes only.
+```
+Full queries available here:
+- sql/analysis_queries.sql
+
+- ```
+  
+## All data in this project is fake and generated for practice purposes only.
