@@ -84,14 +84,13 @@ Notes
 Full queries available here:
 - sql/analysis_queries.sql
 
-```
   
 ## All data in this project is fake and generated for practice purposes only.
 
 
 ```
 ## How to Run
-###1. Install the required packages:
+### 1. Install the required packages:
 
 ```bash
 python -m pip install -r requirements.txt
