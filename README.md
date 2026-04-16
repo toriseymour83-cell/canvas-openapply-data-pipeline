@@ -51,7 +51,7 @@ WHERE cs.engagement_rating IN ('IE', 'NE')
 
 ```
 ### 2. Schools with most missing submissions
-```
+```sql
 SELECT
     oa.school_name,
     COUNT(*) AS missing_submissions
@@ -67,7 +67,7 @@ ORDER BY missing_submissions DESC;
 
 ```
 ### 3. Courses with most late submissions
-```
+```sql
 SELECT
     ce.course_name,
     COUNT(*) AS total_submissions,
