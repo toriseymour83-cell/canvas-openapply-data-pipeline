@@ -58,6 +58,7 @@ ORDER BY missing_submissions DESC;
 ```
 
 ### 3. Courses with the most late submissions
+``` sql
 SELECT
     ce.course_name,
     COUNT(*) AS total_submissions,
@@ -68,7 +69,7 @@ JOIN canvas_enrollments ce
    AND cs.course_id = ce.course_id
 GROUP BY ce.course_name
 ORDER BY late_submissions DESC;
-
+```
 
 ## Full queries are available in:
 
