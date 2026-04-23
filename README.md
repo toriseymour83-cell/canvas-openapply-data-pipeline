@@ -39,7 +39,7 @@ JOIN canvas_enrollments ce
    AND cs.course_id = ce.course_id
 WHERE cs.engagement_rating IN ('IE', 'NE')
    OR cs.term_grade IN ('D', 'E');
-
+```
 
 ### 2. Schools with the most missing submissions
 ``` sql
@@ -55,6 +55,7 @@ JOIN openapply_students oa
 WHERE cs.missing = TRUE
 GROUP BY oa.school_name
 ORDER BY missing_submissions DESC;
+```
 
 ### 3. Courses with the most late submissions
 SELECT
@@ -69,35 +70,37 @@ GROUP BY ce.course_name
 ORDER BY late_submissions DESC;
 
 
-Full queries are available in:
+## Full queries are available in:
 
 sql/analysis_queries.sql
 Notes
 
-All data in this project is fake and generated for practice purposes only.
+# All data in this project is fake and generated for practice purposes only.
 
-I used fake data because the real version of this kind of work would contain sensitive student information.
+The dataset in this project is fully simulated and does not contain any real student records.
 
-How to run
-1. Install the required packages
+# How to run
+### 1. Install the required packages
 
 python -m pip install -r requirements.txt
 
-2. Generate the fake data
+### 2. Generate the fake data
 python src/generate_fake_students.py
 python src/generate_canvas_enrollments.py
 python src/generate_canvas_submissions.py
 python src/generate_openapply_guardians.py
-3. Create the PostgreSQL tables
+
+### 3. Create the PostgreSQL tables
 
 Run:
 
 sql/01_create_tables.sql
-4. Import the CSV files
+
+### 4. Import the CSV files
 
 Import the generated CSV files from data/raw/ into the matching PostgreSQL tables.
 
-5. Run the analysis queries
+### 5. Run the analysis queries
 
 Run:
 
