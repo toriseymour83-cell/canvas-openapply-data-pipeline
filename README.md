@@ -8,6 +8,30 @@ It uses fake data based on the kind of records you might get from:
 - OpenApply, for student and school data
 
 The aim was to recreate a realistic workflow where data from different platforms needs to be cleaned, matched, stored in PostgreSQL, and then queried in SQL.
+## What this project shows
+
+This project demonstrates how education data from multiple systems can be combined, cleaned and prepared for reporting.
+
+It uses a simplified version of a real-world workflow involving:
+
+- Canvas LMS data
+- OpenApply admissions/enrolment data
+- CSV exports
+- Python data cleaning
+- SQL-style joining using student email
+- Power BI-ready reporting outputs
+
+The aim is to show how operational education data can be turned into a reliable dataset for tracking student engagement, grades, cohorts, teachers and school contacts.
+
+## Skills demonstrated
+
+- Data cleaning and preparation
+- Working with CSV files
+- Joining datasets across systems
+- Handling inconsistent names, emails and IDs
+- Creating reporting-ready tables
+- Documenting a repeatable data workflow
+- Translating education operations into usable data outputs
 
 ## Tools
 - Python for generating fake source data
